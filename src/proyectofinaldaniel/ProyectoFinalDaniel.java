@@ -5,6 +5,8 @@
  */
 package proyectofinaldaniel;
 
+import VistasInterfazD.Bienvenido;
+
 /**
  *
  * @author danie
@@ -16,6 +18,9 @@ public class ProyectoFinalDaniel {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+         Bienvenido entrada = new Bienvenido();
+         entrada.show();
+         entrada.setSize(1190, 860);
     }
     
 }

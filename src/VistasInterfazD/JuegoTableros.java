@@ -6,8 +6,8 @@
 package VistasInterfazD;
 
 import ClasesdelProyecto.Casilla;
-import ClasesdelProyecto.CasillaColorDos;
-import ClasesdelProyecto.CasillaColorUno;
+import ClasesdelProyecto.CasillaMontaña;
+import ClasesdelProyecto.CasillaAgua;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JButton;
@@ -23,6 +23,7 @@ public class JuegoTableros extends javax.swing.JFrame {
      */
     public JuegoTableros() {
         initComponents();
+          this.setLocationRelativeTo(null);
         setTitle("FEROVA GAME");
         tablero = new Casilla[8][8];
            
@@ -43,7 +44,7 @@ public class JuegoTableros extends javax.swing.JFrame {
         jButton8x9 = new javax.swing.JButton();
         jButton4x4 = new javax.swing.JButton();
         jButton6x4 = new javax.swing.JButton();
-        panel = new javax.swing.JPanel();
+        panelTablero = new javax.swing.JPanel();
         lblImg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -77,7 +78,7 @@ public class JuegoTableros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8x9);
-        jButton8x9.setBounds(760, 220, 140, 70);
+        jButton8x9.setBounds(760, 210, 140, 60);
 
         jButton4x4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4x4.setFont(new java.awt.Font("Dubai Medium", 0, 36)); // NOI18N
@@ -101,21 +102,23 @@ public class JuegoTableros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6x4);
-        jButton6x4.setBounds(760, 140, 140, 70);
+        jButton6x4.setBounds(760, 140, 140, 60);
 
-        javax.swing.GroupLayout panelLayout = new javax.swing.GroupLayout(panel);
-        panel.setLayout(panelLayout);
-        panelLayout.setHorizontalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelTablero.setForeground(new java.awt.Color(255, 255, 255));
+
+        javax.swing.GroupLayout panelTableroLayout = new javax.swing.GroupLayout(panelTablero);
+        panelTablero.setLayout(panelTableroLayout);
+        panelTableroLayout.setHorizontalGroup(
+            panelTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 580, Short.MAX_VALUE)
         );
-        panelLayout.setVerticalGroup(
-            panelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        panelTableroLayout.setVerticalGroup(
+            panelTableroLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 500, Short.MAX_VALUE)
         );
 
-        getContentPane().add(panel);
-        panel.setBounds(20, 40, 580, 500);
+        getContentPane().add(panelTablero);
+        panelTablero.setBounds(20, 40, 580, 500);
 
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(lblImg);
@@ -131,7 +134,7 @@ public class JuegoTableros extends javax.swing.JFrame {
     
     private void jButtonHaciaEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHaciaEActionPerformed
         // TODO add your handling code here:
-        Estadisticas entrada3 = new Estadisticas();
+        OpcionesFinales entrada3 = new OpcionesFinales();
         entrada3.show();
         entrada3.setSize(825, 866);
        dispose();    
@@ -145,10 +148,10 @@ public class JuegoTableros extends javax.swing.JFrame {
         for (Casilla casilla : casillas) {
             contY++;
             casilla = new Casilla();
-            casilla.setSize(50, 50);
+           casilla.setSize(50, 50);
             casilla.setVisible(true);
-            casilla.setBounds((50*contY), 50*contX, 50, 50);
-            panel.add(casilla);
+            casilla.setBounds((30*contY), 30*contX, 30, 30);
+            panelTablero.add(casilla);
            
         }
     }
@@ -213,6 +216,6 @@ public class JuegoTableros extends javax.swing.JFrame {
     private javax.swing.JButton jButtonHaciaE;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel lblImg;
-    private javax.swing.JPanel panel;
+    private javax.swing.JPanel panelTablero;
     // End of variables declaration//GEN-END:variables
 }
