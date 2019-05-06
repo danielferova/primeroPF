@@ -5,28 +5,21 @@
  */
 package ClasesdelProyecto;
 
-import javax.swing.JButton;
-
 /**
  *
  * @author danie
  */
-public class Casilla extends JButton {
-    private Usuario usuario;
-    
-    
-    
+public class Usuario {
 
-    public Usuario getUsuario() {
-        return usuario;
-    }
+    private final String nombre;
 
-    public void setUsuario(Usuario usuario) {
-        this.usuario = usuario;
+    public Usuario(String nombre) {
+        
+        this.nombre = nombre;
     }
     
     
-
- 
-
+    
+    
+    
 }

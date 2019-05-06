@@ -30,8 +30,8 @@ public class Tienda extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jButtonIR2 = new javax.swing.JButton();
         jButtonCrearA = new javax.swing.JButton();
         jButtonCrearV = new javax.swing.JButton();
         jButtonRTienda = new javax.swing.JButton();
@@ -40,16 +40,24 @@ public class Tienda extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton1.setText("Crear Armas");
-        getContentPane().add(jButton1);
-        jButton1.setBounds(490, 590, 250, 90);
-
         jLabel2.setBackground(new java.awt.Color(0, 0, 0));
         jLabel2.setFont(new java.awt.Font("Gill Sans MT", 3, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 51));
         jLabel2.setText("Seleccione alguna opción");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(210, 10, 410, 70);
+
+        jButtonIR2.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonIR2.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
+        jButtonIR2.setForeground(new java.awt.Color(255, 0, 0));
+        jButtonIR2.setText("Ir a Jugar");
+        jButtonIR2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonIR2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonIR2);
+        jButtonIR2.setBounds(500, 580, 250, 90);
 
         jButtonCrearA.setBackground(new java.awt.Color(0, 0, 0));
         jButtonCrearA.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
@@ -93,6 +101,14 @@ public class Tienda extends javax.swing.JFrame {
           dispose();
     }//GEN-LAST:event_jButtonRTiendaActionPerformed
 
+    private void jButtonIR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIR2ActionPerformed
+        // TODO add your handling code here:
+          OpcionesJuego opcion = new OpcionesJuego();
+       opcion.show();
+       opcion.setSize(825, 866);
+       dispose();
+    }//GEN-LAST:event_jButtonIR2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -129,9 +145,9 @@ public class Tienda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButtonCrearA;
     private javax.swing.JButton jButtonCrearV;
+    private javax.swing.JButton jButtonIR2;
     private javax.swing.JButton jButtonRTienda;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

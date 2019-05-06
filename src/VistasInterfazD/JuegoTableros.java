@@ -8,6 +8,7 @@ package VistasInterfazD;
 import ClasesdelProyecto.Casilla;
 import ClasesdelProyecto.CasillaMontaña;
 import ClasesdelProyecto.CasillaAgua;
+import ClasesdelProyecto.CasillaTerreno;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import javax.swing.JButton;
@@ -25,7 +26,7 @@ public class JuegoTableros extends javax.swing.JFrame {
         initComponents();
           this.setLocationRelativeTo(null);
         setTitle("FEROVA GAME");
-        tablero = new Casilla[8][8];
+        //tablero = new Casilla[8][8];
            
      
     }
@@ -118,7 +119,7 @@ public class JuegoTableros extends javax.swing.JFrame {
         );
 
         getContentPane().add(panelTablero);
-        panelTablero.setBounds(10, 10, 580, 500);
+        panelTablero.setBounds(30, 30, 580, 500);
 
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(lblImg);
@@ -139,13 +140,105 @@ public class JuegoTableros extends javax.swing.JFrame {
         entrada3.setSize(825, 866);
        dispose();    
     }//GEN-LAST:event_jButtonHaciaEActionPerformed
+    public void setCasilla(int tipoTerreno, int x, int y){
+        tablero[x][y]= null;
+        if (tipoTerreno == 1) {
+            
+            tablero[x][y] = new CasillaAgua();
+        }else{
+            tablero[x][y]= new CasillaMontaña();
+        }
+    }
 
     public void gTablero(int filas, int columnas){
     BorderLayout b = new BorderLayout();
    
  
-     
+        tablero =  new Casilla[filas][columnas];
+         boolean blanco = true;
+         System.out.println("filas" + filas);
+        for (int i = 0; i<filas; i++){
+            for (int j = 0; j<columnas; j++){
+
+              //  blanco = !blanco;
+              //  tablero[i][j] = new Casilla ();
+            //   tablero[i][j].setSize(50, 50);
+             /*   if (blanco)
+                    tablero[i][j].setBackground(Color.white);
+                else
+                    tablero[i][j].setBackground(Color.white);*/
+                blanco = !blanco;
+             //tablero[i][j]= new CasillaTerreno();
+               //tablero[i][j].setSize(50, 50);
+
+                
+               if (blanco) {
+                    tablero[i][j]= new CasillaTerreno();
+                   tablero[i][j].setSize(50, 50);
+                   if (blanco){
+                        tablero[i][j] = new CasillaMontaña();
+                   } 
+                   else
+                       tablero[i][j] = new CasillaAgua();
+               }
+              //  if (blanco)
+                //    tablero[i][j] = new CasillaMontaña();
+                //else
+                  //  tablero[i][j] = new CasillaAgua();
+
+                
+                tablero[i][j].setVisible(true);
+
+                tablero[i][j].setBounds((50*j), 50*i, 50, 50);
+               
+
+                this.remove(panelTablero);
+                 this.add(tablero[i][j], BorderLayout.CENTER);
+               this.add(panelTablero);
+                     panelTablero.add(tablero[i][j]);
+             //    panelTablero.removeAll();
+            panelTablero.validate();
+            panelTablero.repaint();
+            tablero[i][j].removeAll();
+           //tablero[i][j].repaint();
+            
+            }
+            
+            blanco = !blanco;
+        }
+        
+        
+        
+        
+        
+    /*tablero = new Casilla[filas][columnas];
+    int contX=-1,contY=-1;
+    for (Casilla[] casillas : tablero) {
+        contX++;
+        for (Casilla casilla : casillas) {
+            contY++;
+            casilla = new Casilla();
+           casilla.setSize(50, 50);
+            //casilla.setVisible(true);
+            casilla.setBounds((30), (30), 30, 30);
+            panelTablero.add(casilla);
+            panelTablero.validate();
+            panelTablero.repaint();
+           
+        }
+        
+    }*/
 }
+    
+     public void escenarioOne(){
+        //tierra
+        for (int i = 0; i < 12; i++) {
+            for (int j = 0; j < 12; j++) {
+                tablero[i][j] = new CasillaTerreno();
+
+            }
+        }
+    }
      
     private void jButton4x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4x4ActionPerformed
         // TODO add your handling code here:

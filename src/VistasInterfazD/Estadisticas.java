@@ -79,7 +79,7 @@ public void CargarRegistrar(){
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTableEstadisticas.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 14)); // NOI18N
+        jTableEstadisticas.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 18)); // NOI18N
         jTableEstadisticas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
