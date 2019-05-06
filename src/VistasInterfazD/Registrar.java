@@ -41,6 +41,15 @@ public class Registrar extends javax.swing.JFrame {
         jButtonIR = new javax.swing.JButton();
         jButtonRegistrar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jComboBoxV2 = new javax.swing.JComboBox<>();
+        jTextFieldV3 = new javax.swing.JTextField();
+        jComboBoxV3 = new javax.swing.JComboBox<>();
+        jTextFieldV2 = new javax.swing.JTextField();
+        jTextFieldV1 = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jTextFieldNombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
@@ -49,13 +58,13 @@ public class Registrar extends javax.swing.JFrame {
         getContentPane().setLayout(null);
 
         jComboBoxV1.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
-        jComboBoxV1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBoxV1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avion", "Tanque", " " }));
+        jComboBoxV1.setForeground(new java.awt.Color(255, 0, 51));
+        jComboBoxV1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avión", "Tanque", " " }));
         getContentPane().add(jComboBoxV1);
-        jComboBoxV1.setBounds(420, 160, 160, 42);
+        jComboBoxV1.setBounds(960, 510, 160, 42);
 
         jButtonIR.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonIR.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jButtonIR.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
         jButtonIR.setForeground(new java.awt.Color(255, 0, 0));
         jButtonIR.setText("Ir a Jugar");
         jButtonIR.addActionListener(new java.awt.event.ActionListener() {
@@ -64,25 +73,79 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonIR);
-        jButtonIR.setBounds(930, 160, 220, 80);
+        jButtonIR.setBounds(510, 620, 350, 110);
 
         jButtonRegistrar.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRegistrar.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jButtonRegistrar.setForeground(new java.awt.Color(255, 0, 0));
-        jButtonRegistrar.setText("Registrar");
+        jButtonRegistrar.setText("Registrar nombre");
         jButtonRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonRegistrarActionPerformed(evt);
             }
         });
         getContentPane().add(jButtonRegistrar);
-        jButtonRegistrar.setBounds(920, 50, 220, 80);
+        jButtonRegistrar.setBounds(750, 40, 350, 100);
 
         jLabel3.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel3.setText("Seleccione Vehículo 1:");
+        jLabel3.setText("Ingrese nombre del tercer vehículo:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(50, 160, 380, 50);
+        jLabel3.setBounds(40, 520, 560, 50);
+
+        jLabel6.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel6.setText("Ingrese nombre del primer vehículo:");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(30, 310, 560, 50);
+
+        jLabel7.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel7.setText("Ingrese nombre del segundo vehículo:");
+        getContentPane().add(jLabel7);
+        jLabel7.setBounds(10, 410, 600, 50);
+
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setText("Vehículos");
+        getContentPane().add(jLabel8);
+        jLabel8.setBounds(310, 200, 380, 50);
+
+        jComboBoxV2.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
+        jComboBoxV2.setForeground(new java.awt.Color(255, 0, 51));
+        jComboBoxV2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avión", "Tanque", " " }));
+        getContentPane().add(jComboBoxV2);
+        jComboBoxV2.setBounds(960, 310, 160, 42);
+
+        jTextFieldV3.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldV3.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
+        jTextFieldV3.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jTextFieldV3);
+        jTextFieldV3.setBounds(600, 520, 310, 40);
+
+        jComboBoxV3.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
+        jComboBoxV3.setForeground(new java.awt.Color(255, 0, 51));
+        jComboBoxV3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avión", "Tanque", " " }));
+        getContentPane().add(jComboBoxV3);
+        jComboBoxV3.setBounds(960, 410, 160, 42);
+
+        jTextFieldV2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldV2.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
+        jTextFieldV2.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jTextFieldV2);
+        jTextFieldV2.setBounds(600, 410, 310, 40);
+
+        jTextFieldV1.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldV1.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
+        jTextFieldV1.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jTextFieldV1);
+        jTextFieldV1.setBounds(600, 320, 310, 40);
+
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("Elija sus tres vehículos");
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(860, 220, 340, 40);
 
         jLabel4.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
@@ -94,7 +157,7 @@ public class Registrar extends javax.swing.JFrame {
         jTextFieldNombre.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
         jTextFieldNombre.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(jTextFieldNombre);
-        jTextFieldNombre.setBounds(370, 60, 310, 40);
+        jTextFieldNombre.setBounds(370, 60, 350, 50);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -109,12 +172,24 @@ public class Registrar extends javax.swing.JFrame {
         //lista.add(persona);
         
         String nombre = jTextFieldNombre.getText();
-        
+        String v1 = jTextFieldV1.getText();
+          String v2 = jTextFieldV2.getText();
+            String v3 = jTextFieldV3.getText();
+      
+  
+    
+    
+   
         //NOMBRE DE LA PERSONA ATRUBUTOS
-        Persona  person = new Persona(nombre);
+        Persona  person = new Persona(nombre, v1, v2, v3);
         contenedor.add(person);
-        //
+        //Limpia
         jTextFieldNombre.setText("");
+        jTextFieldV1.setText("");
+jTextFieldV2.setText("");
+jTextFieldV3.setText("");
+   
+        
         
         
       //  mostrar();
@@ -176,9 +251,18 @@ public class Registrar extends javax.swing.JFrame {
     private javax.swing.JButton jButtonIR;
     private javax.swing.JButton jButtonRegistrar;
     private javax.swing.JComboBox<String> jComboBoxV1;
+    private javax.swing.JComboBox<String> jComboBoxV2;
+    private javax.swing.JComboBox<String> jComboBoxV3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField jTextFieldNombre;
+    private javax.swing.JTextField jTextFieldV1;
+    private javax.swing.JTextField jTextFieldV2;
+    private javax.swing.JTextField jTextFieldV3;
     // End of variables declaration//GEN-END:variables
 }

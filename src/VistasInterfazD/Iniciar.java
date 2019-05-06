@@ -32,12 +32,9 @@ public class Iniciar extends javax.swing.JFrame {
 
         jButton2 = new javax.swing.JButton();
         jButtonTienda1 = new javax.swing.JButton();
-        jTextFieldNombre = new javax.swing.JTextField();
         jButtonRBienvenido = new javax.swing.JButton();
         jButtonSiguiente2 = new javax.swing.JButton();
         jButtonTienda = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -47,18 +44,17 @@ public class Iniciar extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButtonTienda1.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonTienda1.setFont(new java.awt.Font("Dubai", 3, 24)); // NOI18N
-        jButtonTienda1.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonTienda1.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonTienda1.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jButtonTienda1.setForeground(new java.awt.Color(255, 0, 51));
         jButtonTienda1.setText("Cargar una partida");
+        jButtonTienda1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonTienda1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonTienda1);
-        jButtonTienda1.setBounds(330, 730, 250, 40);
-
-        jTextFieldNombre.setBackground(new java.awt.Color(255, 255, 255));
-        jTextFieldNombre.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
-        jTextFieldNombre.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jTextFieldNombre);
-        jTextFieldNombre.setBounds(320, 40, 220, 40);
+        jButtonTienda1.setBounds(240, 350, 360, 110);
 
         jButtonRBienvenido.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRBienvenido.setFont(new java.awt.Font("Copperplate Gothic Bold", 3, 18)); // NOI18N
@@ -72,9 +68,9 @@ public class Iniciar extends javax.swing.JFrame {
         getContentPane().add(jButtonRBienvenido);
         jButtonRBienvenido.setBounds(40, 730, 160, 50);
 
-        jButtonSiguiente2.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonSiguiente2.setFont(new java.awt.Font("Copperplate Gothic Bold", 3, 18)); // NOI18N
-        jButtonSiguiente2.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonSiguiente2.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonSiguiente2.setFont(new java.awt.Font("Copperplate Gothic Bold", 3, 36)); // NOI18N
+        jButtonSiguiente2.setForeground(new java.awt.Color(255, 0, 51));
         jButtonSiguiente2.setText("ir a jugar");
         jButtonSiguiente2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,11 +78,11 @@ public class Iniciar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonSiguiente2);
-        jButtonSiguiente2.setBounds(610, 730, 150, 50);
+        jButtonSiguiente2.setBounds(260, 200, 340, 110);
 
-        jButtonTienda.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonTienda.setFont(new java.awt.Font("Dubai", 3, 24)); // NOI18N
-        jButtonTienda.setForeground(new java.awt.Color(0, 0, 0));
+        jButtonTienda.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonTienda.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jButtonTienda.setForeground(new java.awt.Color(255, 0, 51));
         jButtonTienda.setText("Tienda");
         jButtonTienda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,25 +90,13 @@ public class Iniciar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonTienda);
-        jButtonTienda.setBounds(670, 30, 110, 40);
+        jButtonTienda.setBounds(290, 490, 250, 140);
 
-        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel5.setText("Crear Armas");
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(280, 390, 270, 70);
-
-        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel4.setText("Crear un Vehículo");
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(230, 120, 340, 40);
-
-        jLabel3.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel3.setText("Ingrese su nombre:");
+        jLabel3.setText("Seleccione una opción");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(10, 30, 310, 62);
+        jLabel3.setBounds(190, 20, 500, 80);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/Nacis.jpg"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -150,6 +134,10 @@ public class Iniciar extends javax.swing.JFrame {
        opcion.setSize(825, 866);
        dispose();
     }//GEN-LAST:event_jButtonSiguiente2ActionPerformed
+
+    private void jButtonTienda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTienda1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonTienda1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -195,8 +183,5 @@ public class Iniciar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JTextField jTextFieldNombre;
     // End of variables declaration//GEN-END:variables
 }

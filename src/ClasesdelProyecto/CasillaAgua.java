@@ -17,7 +17,7 @@ public class CasillaAgua extends Casilla {
    
 public CasillaAgua(){
     
-        this.setBackground(Color.black);
+        this.setBackground(Color.blue);
 }
 
   

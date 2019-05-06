@@ -13,22 +13,31 @@ import javax.swing.table.DefaultTableModel;
  * @author danie
  */
 public class Estadisticas extends javax.swing.JFrame {
-    
+   
     private DefaultTableModel modelo;
     int cont = 0;
-    
+
 
     /**
      * Creates new form Estadisticas
      */
     public Estadisticas() {
         initComponents();
+         this.setLocationRelativeTo(null);
+        setSize(1490, 1200);
+        setTitle("FEROVA GAME");
         CargarRegistrar();
         Cargardatos();
     }
 public void CargarRegistrar(){
     String datos [][]= {};
-    String columna[]= {"Nombre"};
+    String columna[]= {"Nombre", "V1", "V2", "V3"};
+    String columna1[] = { "V1" };
+    
+    
+        
+  
+    
     modelo= new DefaultTableModel(datos, columna);
     jTableEstadisticas.setModel(modelo);
     
@@ -39,6 +48,10 @@ public void CargarRegistrar(){
                     a= (Persona)Registrar.contenedor.get(i);
                     modelo.insertRow(cont, new Object []{ });
                     modelo.setValueAt(a.getNombre(), cont, 0);
+                    modelo.setValueAt(a.getV1(), cont, 1);
+                    modelo.setValueAt(a.getV2(), cont, 2);
+                    modelo.setValueAt(a.getV3(), cont, 3);
+                    
                     
                     
                 }
@@ -78,7 +91,7 @@ public void CargarRegistrar(){
         jScrollPane1.setViewportView(jTableEstadisticas);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 170, 840, 610);
+        jScrollPane1.setBounds(60, 170, 830, 560);
 
         jButtonRegresarE.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRegresarE.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
@@ -112,7 +125,7 @@ public void CargarRegistrar(){
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1810, 1300);
+        jLabel1.setBounds(0, 10, 1810, 1300);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

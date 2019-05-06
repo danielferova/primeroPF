@@ -118,7 +118,7 @@ public class JuegoTableros extends javax.swing.JFrame {
         );
 
         getContentPane().add(panelTablero);
-        panelTablero.setBounds(20, 40, 580, 500);
+        panelTablero.setBounds(10, 10, 580, 500);
 
         lblImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(lblImg);
@@ -141,36 +141,29 @@ public class JuegoTableros extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonHaciaEActionPerformed
 
     public void gTablero(int filas, int columnas){
-    tablero = new Casilla[filas][columnas];
-    int contX=-1,contY=-1;
-    for (Casilla[] casillas : tablero) {
-        contX++;
-        for (Casilla casilla : casillas) {
-            contY++;
-            casilla = new Casilla();
-           casilla.setSize(50, 50);
-            casilla.setVisible(true);
-            casilla.setBounds((30*contY), 30*contX, 30, 30);
-            panelTablero.add(casilla);
-           
-        }
-    }
+    BorderLayout b = new BorderLayout();
+   
+ 
+     
 }
      
     private void jButton4x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4x4ActionPerformed
         // TODO add your handling code here:
-        
+         
         gTablero(4, 4);
+       
         
     }//GEN-LAST:event_jButton4x4ActionPerformed
 
     private void jButton6x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6x4ActionPerformed
-        // TODO add your handling code here:
+        // TODO add your handling code here:  
+       
         gTablero(6, 4);
     }//GEN-LAST:event_jButton6x4ActionPerformed
 
     private void jButton8x9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8x9ActionPerformed
         // TODO add your handling code here:
+         
         gTablero(8, 9);
     }//GEN-LAST:event_jButton8x9ActionPerformed
 

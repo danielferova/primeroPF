@@ -5,10 +5,15 @@
  */
 package ClasesdelProyecto;
 
+import java.awt.Color;
+
 /**
  *
  * @author danie
  */
-public class CasillaTerreno {
+public class CasillaTerreno extends Casilla{
+    public CasillaTerreno(){
+        this.setBackground(Color.white);
+    }
     
 }

@@ -133,7 +133,7 @@ public class OpcionesFinales extends javax.swing.JFrame {
         // TODO add your handling code here:
         Estadisticas e = new Estadisticas();
         e.show();
-        e.setSize(1290, 1000);
+        e.setSize(1490, 1200);
         dispose();
     }//GEN-LAST:event_jButtonEstadisticasActionPerformed
 

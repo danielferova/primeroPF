@@ -16,7 +16,7 @@ public class CasillaMontaña extends Casilla{
     
      public CasillaMontaña(){
     
-        this.setBackground(Color.white);
+        this.setBackground(Color.green);
 }
 
    
