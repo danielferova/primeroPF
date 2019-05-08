@@ -19,6 +19,7 @@ public class Registrar extends javax.swing.JFrame {
     public int buscar;
     
     /**
+     * Constructor del JFRAME Registrar
      * Creates new form Registrar
      */
     public Registrar() {
@@ -39,15 +40,18 @@ public class Registrar extends javax.swing.JFrame {
 
         jComboBoxV1 = new javax.swing.JComboBox<>();
         jButtonIR = new javax.swing.JButton();
-        jButtonRegistrarName = new javax.swing.JButton();
+        jButtonRegresarTipos = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
+        Jmostrar1 = new javax.swing.JTextField();
         jComboBoxV2 = new javax.swing.JComboBox<>();
+        Jmostrar2 = new javax.swing.JTextField();
         jTextFieldV3 = new javax.swing.JTextField();
         jComboBoxV3 = new javax.swing.JComboBox<>();
+        Jmostrar3 = new javax.swing.JTextField();
         jTextFieldV2 = new javax.swing.JTextField();
         jTextFieldV1 = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
@@ -60,14 +64,19 @@ public class Registrar extends javax.swing.JFrame {
 
         jComboBoxV1.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         jComboBoxV1.setForeground(new java.awt.Color(255, 0, 51));
-        jComboBoxV1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avión", "Tanque", " " }));
+        jComboBoxV1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elija Vehículo", "Avión", "Tanque", " " }));
+        jComboBoxV1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxV1ItemStateChanged(evt);
+            }
+        });
         jComboBoxV1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jComboBoxV1ActionPerformed(evt);
             }
         });
         getContentPane().add(jComboBoxV1);
-        jComboBoxV1.setBounds(960, 520, 160, 42);
+        jComboBoxV1.setBounds(680, 270, 160, 42);
 
         jButtonIR.setBackground(new java.awt.Color(255, 255, 255));
         jButtonIR.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
@@ -79,85 +88,118 @@ public class Registrar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonIR);
-        jButtonIR.setBounds(690, 620, 350, 110);
+        jButtonIR.setBounds(460, 620, 510, 110);
 
-        jButtonRegistrarName.setBackground(new java.awt.Color(255, 255, 255));
-        jButtonRegistrarName.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
-        jButtonRegistrarName.setForeground(new java.awt.Color(255, 0, 0));
-        jButtonRegistrarName.setText("Registrar ");
-        jButtonRegistrarName.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRegresarTipos.setBackground(new java.awt.Color(255, 255, 255));
+        jButtonRegresarTipos.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jButtonRegresarTipos.setForeground(new java.awt.Color(255, 0, 0));
+        jButtonRegresarTipos.setText("Regresar");
+        jButtonRegresarTipos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonRegistrarNameActionPerformed(evt);
+                jButtonRegresarTiposActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonRegistrarName);
-        jButtonRegistrarName.setBounds(230, 620, 350, 100);
+        getContentPane().add(jButtonRegresarTipos);
+        jButtonRegresarTipos.setBounds(30, 660, 180, 70);
 
         jLabel3.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 0, 0));
         jLabel3.setText("Ingrese nombre del tercer vehículo:");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(40, 520, 560, 50);
+        jLabel3.setBounds(40, 450, 560, 50);
 
         jLabel6.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 0, 0));
         jLabel6.setText("Ingrese nombre del primer vehículo:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(30, 310, 560, 50);
+        jLabel6.setBounds(40, 210, 560, 50);
 
         jLabel7.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 0, 0));
         jLabel7.setText("Ingrese nombre del segundo vehículo:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(10, 410, 600, 50);
+        jLabel7.setBounds(30, 330, 600, 50);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("*NOTA:  Para registrar su nombre  y el de los vehículos presione  en el botón REGISTRAR.");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(830, 70, 340, 120);
+        jLabel9.setBounds(780, 0, 340, 120);
 
         jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 48)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Vehículos");
         getContentPane().add(jLabel8);
-        jLabel8.setBounds(310, 190, 380, 50);
+        jLabel8.setBounds(380, 140, 380, 50);
+
+        Jmostrar1.setBackground(new java.awt.Color(255, 255, 255));
+        Jmostrar1.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
+        Jmostrar1.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(Jmostrar1);
+        Jmostrar1.setBounds(890, 270, 230, 40);
 
         jComboBoxV2.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         jComboBoxV2.setForeground(new java.awt.Color(255, 0, 51));
-        jComboBoxV2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avión", "Tanque", " " }));
+        jComboBoxV2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elja Vehículo", "Avión", "Tanque", " " }));
+        jComboBoxV2.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxV2ItemStateChanged(evt);
+            }
+        });
         getContentPane().add(jComboBoxV2);
-        jComboBoxV2.setBounds(960, 320, 160, 42);
+        jComboBoxV2.setBounds(690, 390, 160, 42);
+
+        Jmostrar2.setBackground(new java.awt.Color(255, 255, 255));
+        Jmostrar2.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
+        Jmostrar2.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(Jmostrar2);
+        Jmostrar2.setBounds(910, 390, 230, 40);
 
         jTextFieldV3.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV3.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
         jTextFieldV3.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(jTextFieldV3);
-        jTextFieldV3.setBounds(600, 520, 310, 40);
+        jTextFieldV3.setBounds(230, 520, 310, 40);
 
         jComboBoxV3.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         jComboBoxV3.setForeground(new java.awt.Color(255, 0, 51));
-        jComboBoxV3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Avión", "Tanque", " " }));
+        jComboBoxV3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elja Vehículo", "Avión", "Tanque", " " }));
+        jComboBoxV3.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxV3ItemStateChanged(evt);
+            }
+        });
         getContentPane().add(jComboBoxV3);
-        jComboBoxV3.setBounds(960, 410, 160, 42);
+        jComboBoxV3.setBounds(690, 522, 170, 40);
+
+        Jmostrar3.setBackground(new java.awt.Color(255, 255, 255));
+        Jmostrar3.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
+        Jmostrar3.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(Jmostrar3);
+        Jmostrar3.setBounds(910, 520, 230, 40);
 
         jTextFieldV2.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV2.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
         jTextFieldV2.setForeground(new java.awt.Color(0, 0, 0));
         getContentPane().add(jTextFieldV2);
-        jTextFieldV2.setBounds(600, 410, 310, 40);
+        jTextFieldV2.setBounds(220, 390, 310, 40);
 
         jTextFieldV1.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV1.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
         jTextFieldV1.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldV1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldV1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jTextFieldV1);
-        jTextFieldV1.setBounds(600, 320, 310, 40);
+        jTextFieldV1.setBounds(220, 270, 310, 40);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 2, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Elija sus tres vehículos");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(860, 210, 340, 40);
+        jLabel5.setBounds(730, 210, 340, 40);
 
         jLabel4.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 0, 0));
@@ -173,50 +215,101 @@ public class Registrar extends javax.swing.JFrame {
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(-60, 10, 1810, 1300);
+        jLabel1.setBounds(-60, 0, 1810, 1310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonRegistrarNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegistrarNameActionPerformed
+/**
+ * Método para regresar al JFRAME OpcionesJuego
+ * @param evt 
+ */
+    private void jButtonRegresarTiposActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarTiposActionPerformed
         // TODO add your handling code here:
         //Persona persona = new Persona(jTextFieldNombre.getText() );
         //lista.add(persona);
+         this.setVisible(false);
+
+        new OpcionesJuego().setVisible(true);
         
-        String nombre = jTextFieldNombre.getText();
+       setSize(825, 866);
+       dispose();
+      /*  String nombre = jTextFieldNombre.getText();
         String v1 = jTextFieldV1.getText();
         String v2 = jTextFieldV2.getText();
         String v3 = jTextFieldV3.getText();
+        String tipo1 = Jmostrar1.getText();
+        String tipo2 = Jmostrar2.getText();
+        String tipo3 = Jmostrar3.getText();
         //NOMBRE DE LA PERSONA ATRUBUTOS
-        Persona  person = new Persona(nombre, v1, v2, v3);
+        Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);
         contenedor.add(person);
         //Limpia
         jTextFieldNombre.setText("");
         jTextFieldV1.setText("");
         jTextFieldV2.setText("");
-        jTextFieldV3.setText("");      
-    }//GEN-LAST:event_jButtonRegistrarNameActionPerformed
-
+        jTextFieldV3.setText("");*/      
+    }//GEN-LAST:event_jButtonRegresarTiposActionPerformed
+/**
+ * Método para ir mi JFRAME JuegoTableros donde esta mis 3 tipos de tableros
+ * @param evt 
+ */
     private void jButtonIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIRActionPerformed
         // TODO add your handling code here:
         JuegoTableros entrada2 = new JuegoTableros();
         entrada2.show();
         entrada2.setSize(1290, 1000);
         dispose();
+        
+        
+        String nombre = jTextFieldNombre.getText();
+        String v1 = jTextFieldV1.getText();
+        String v2 = jTextFieldV2.getText();
+        String v3 = jTextFieldV3.getText();
+        String tipo1 = Jmostrar1.getText();
+        String tipo2 = Jmostrar2.getText();
+        String tipo3 = Jmostrar3.getText();
+        //NOMBRE DE LA PERSONA ATRUBUTOS
+        Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);
+        contenedor.add(person);
+        //Limpia
+        jTextFieldNombre.setText("");
+        jTextFieldV1.setText("");
+        jTextFieldV2.setText("");
+        jTextFieldV3.setText("");      
     }//GEN-LAST:event_jButtonIRActionPerformed
 
+    /*private void comboItemStateChanged(java.awt.event.ItemEvent evt) {                                       
+        this.jLabel3.setText("Actualmente seleccionado: "+combo.getSelectedItem().toString());
+        
+    } */            
     private void jComboBoxV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxV1ActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jComboBoxV1ActionPerformed
+
+    private void jTextFieldV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldV1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldV1ActionPerformed
+
+    private void jComboBoxV1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxV1ItemStateChanged
+        // TODO add your handling code here:
+       this.Jmostrar1.setText("= "+jComboBoxV1.getSelectedItem().toString());
+    }//GEN-LAST:event_jComboBoxV1ItemStateChanged
+/**
+ * Combo Box
+ * @param evt 
+ */
+    private void jComboBoxV2ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxV2ItemStateChanged
+        // TODO add your handling code here:
+        this.Jmostrar2.setText("= "+jComboBoxV2.getSelectedItem().toString());
+    }//GEN-LAST:event_jComboBoxV2ItemStateChanged
+
+    private void jComboBoxV3ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxV3ItemStateChanged
+        // TODO add your handling code here:
+        this.Jmostrar3.setText("= "+jComboBoxV3.getSelectedItem().toString());
+    }//GEN-LAST:event_jComboBoxV3ItemStateChanged
  
- /*   public void mostrar(){
-        String matriz[][] = new String [lista.size()] [4];
-        for (int i = 0; i < lista.size(); i++) {
-            matriz [i][0]= lista.get(i).getNombre();
-            
-            
-        }
-    }*/
+
     /**
      * @param args the command line arguments
      */
@@ -253,8 +346,11 @@ public class Registrar extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField Jmostrar1;
+    private javax.swing.JTextField Jmostrar2;
+    private javax.swing.JTextField Jmostrar3;
     private javax.swing.JButton jButtonIR;
-    private javax.swing.JButton jButtonRegistrarName;
+    private javax.swing.JButton jButtonRegresarTipos;
     private javax.swing.JComboBox<String> jComboBoxV1;
     private javax.swing.JComboBox<String> jComboBoxV2;
     private javax.swing.JComboBox<String> jComboBoxV3;

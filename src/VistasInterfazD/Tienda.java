@@ -12,12 +12,13 @@ package VistasInterfazD;
 public class Tienda extends javax.swing.JFrame {
 
     /**
+     * Constructor de mi JFRAME TIENDA
      * Creates new form Tienda
      */
     public Tienda() {
         initComponents();
         this.setLocationRelativeTo(null);
-
+         setSize(825, 866);
         setTitle("FEROVA GAME");
     }
 
@@ -31,6 +32,7 @@ public class Tienda extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel2 = new javax.swing.JLabel();
+        jButtonComprar = new javax.swing.JButton();
         jButtonIR2 = new javax.swing.JButton();
         jButtonCrearA = new javax.swing.JButton();
         jButtonCrearV = new javax.swing.JButton();
@@ -46,6 +48,18 @@ public class Tienda extends javax.swing.JFrame {
         jLabel2.setText("Seleccione alguna opción");
         getContentPane().add(jLabel2);
         jLabel2.setBounds(210, 10, 410, 70);
+
+        jButtonComprar.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonComprar.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
+        jButtonComprar.setForeground(new java.awt.Color(255, 0, 0));
+        jButtonComprar.setText("Comprar");
+        jButtonComprar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonComprarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButtonComprar);
+        jButtonComprar.setBounds(280, 400, 250, 90);
 
         jButtonIR2.setBackground(new java.awt.Color(0, 0, 0));
         jButtonIR2.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
@@ -63,6 +77,11 @@ public class Tienda extends javax.swing.JFrame {
         jButtonCrearA.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
         jButtonCrearA.setForeground(new java.awt.Color(255, 0, 0));
         jButtonCrearA.setText("Crear Armas");
+        jButtonCrearA.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCrearAActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonCrearA);
         jButtonCrearA.setBounds(280, 280, 250, 90);
 
@@ -71,7 +90,7 @@ public class Tienda extends javax.swing.JFrame {
         jButtonCrearV.setForeground(new java.awt.Color(255, 0, 0));
         jButtonCrearV.setText("Crear Vehículos");
         getContentPane().add(jButtonCrearV);
-        jButtonCrearV.setBounds(280, 170, 250, 90);
+        jButtonCrearV.setBounds(280, 160, 250, 90);
 
         jButtonRTienda.setBackground(new java.awt.Color(0, 0, 0));
         jButtonRTienda.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
@@ -91,7 +110,10 @@ public class Tienda extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Método para regresar a mi JFRAME Iniciar
+ * @param evt 
+ */
     private void jButtonRTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRTiendaActionPerformed
         // TODO add your handling code here:
          this.setVisible(false);
@@ -100,7 +122,10 @@ public class Tienda extends javax.swing.JFrame {
         setSize(825, 866);
           dispose();
     }//GEN-LAST:event_jButtonRTiendaActionPerformed
-
+/**
+ * Método para ir a jugar
+ * @param evt 
+ */
     private void jButtonIR2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIR2ActionPerformed
         // TODO add your handling code here:
           OpcionesJuego opcion = new OpcionesJuego();
@@ -108,6 +133,28 @@ public class Tienda extends javax.swing.JFrame {
        opcion.setSize(825, 866);
        dispose();
     }//GEN-LAST:event_jButtonIR2ActionPerformed
+/**
+ * Método para ir a CreaArmas
+ * @param evt 
+ */
+    private void jButtonCrearAActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCrearAActionPerformed
+        // TODO add your handling code here:
+        CrearArmas k = new CrearArmas();
+        k.show();
+        k.setSize(1290, 1000);
+        dispose();
+    }//GEN-LAST:event_jButtonCrearAActionPerformed
+/**
+ * Método para ir a Comprar Armas o Vehículos
+ * @param evt 
+ */
+    private void jButtonComprarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprarActionPerformed
+        // TODO add your handling code here:
+        Comprar m = new Comprar();
+        m.show();
+        m.setSize(1290, 1000);
+        dispose();
+    }//GEN-LAST:event_jButtonComprarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -145,6 +192,7 @@ public class Tienda extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonComprar;
     private javax.swing.JButton jButtonCrearA;
     private javax.swing.JButton jButtonCrearV;
     private javax.swing.JButton jButtonIR2;

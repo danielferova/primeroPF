@@ -31,7 +31,7 @@
       </AuxValues>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="60" y="170" width="830" height="560"/>
+          <AbsoluteConstraints x="60" y="170" width="1170" height="550"/>
         </Constraint>
       </Constraints>
 
@@ -40,14 +40,17 @@
         <Component class="javax.swing.JTable" name="jTableEstadisticas">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Gill Sans Ultra Bold" size="18" style="3"/>
+              <Font name="Dubai" size="18" style="3"/>
             </Property>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-              <Table columnCount="4" rowCount="0">
+              <Table columnCount="7" rowCount="0">
                 <Column editable="true" title="Nombre" type="java.lang.Object"/>
-                <Column editable="true" title="Veh&#xed;culo 1" type="java.lang.Object"/>
-                <Column editable="true" title="Veh&#xed;culo 2" type="java.lang.Object"/>
-                <Column editable="true" title="Veh&#xed;culo 3" type="java.lang.Object"/>
+                <Column editable="true" title="Nombre V1" type="java.lang.Object"/>
+                <Column editable="true" title="Tipo de Veh&#xed;culo1" type="java.lang.Object"/>
+                <Column editable="true" title="Nombre V2" type="java.lang.Object"/>
+                <Column editable="true" title="TIpo de Veh&#xed;culo2" type="java.lang.Object"/>
+                <Column editable="true" title="Nombre V3" type="java.lang.Object"/>
+                <Column editable="true" title="Tipo de Veh&#xed;culo3" type="java.lang.Object"/>
               </Table>
             </Property>
           </Properties>
@@ -110,7 +113,7 @@
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="350" y="60" width="210" height="70"/>
+          <AbsoluteConstraints x="540" y="70" width="210" height="70"/>
         </Constraint>
       </Constraints>
     </Component>

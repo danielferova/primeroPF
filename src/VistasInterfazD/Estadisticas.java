@@ -19,6 +19,7 @@ public class Estadisticas extends javax.swing.JFrame {
 
 
     /**
+     * Constructor de mi JFRAME Estadisticas
      * Creates new form Estadisticas
      */
     public Estadisticas() {
@@ -29,9 +30,12 @@ public class Estadisticas extends javax.swing.JFrame {
         CargarRegistrar();
         Cargardatos();
     }
+    /**
+     * Método para colocoar en mi JTABLE
+     */
 public void CargarRegistrar(){
     String datos [][]= {};
-    String columna[]= {"Nombre", "V1", "V2", "V3"};
+    String columna[]= {"Nombre", "Nombre Vehículo1", "Tipo", "Nombre Vehículo2","Tipo","Nombre Vehículo3", "Tipo"};
     String columna1[] = { "V1" };
     
     
@@ -42,15 +46,24 @@ public void CargarRegistrar(){
     jTableEstadisticas.setModel(modelo);
     
 }
+              /**
+               * Método para cargar los datos de mi clase persona y mi JFRAME registrar
+               */
             public void Cargardatos(){
                 Persona a;
+                Registrar b;
                 for (int i = 0; i < Registrar.contenedor.size(); i++) {
                     a= (Persona)Registrar.contenedor.get(i);
+                  //  b= (Registrar) Registrar.contenedor.get(i);
                     modelo.insertRow(cont, new Object []{ });
                     modelo.setValueAt(a.getNombre(), cont, 0);
                     modelo.setValueAt(a.getV1(), cont, 1);
-                    modelo.setValueAt(a.getV2(), cont, 2);
-                    modelo.setValueAt(a.getV3(), cont, 3);
+                    modelo.setValueAt(a.getV2(), cont, 3);
+                    modelo.setValueAt(a.getV3(), cont, 5);
+                     modelo.setValueAt(a.getTipo1(), cont, 2);
+                     modelo.setValueAt(a.getTipo2(), cont, 4);
+                             modelo.setValueAt(a.getTipo3(), cont, 6);
+                     
                     
                     
                     
@@ -79,19 +92,19 @@ public void CargarRegistrar(){
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jTableEstadisticas.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 18)); // NOI18N
+        jTableEstadisticas.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         jTableEstadisticas.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
             new String [] {
-                "Nombre", "Vehículo 1", "Vehículo 2", "Vehículo 3"
+                "Nombre", "Nombre V1", "Tipo de Vehículo1", "Nombre V2", "TIpo de Vehículo2", "Nombre V3", "Tipo de Vehículo3"
             }
         ));
         jScrollPane1.setViewportView(jTableEstadisticas);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(60, 170, 830, 560);
+        jScrollPane1.setBounds(60, 170, 1170, 550);
 
         jButtonRegresarE.setBackground(new java.awt.Color(255, 255, 255));
         jButtonRegresarE.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
@@ -121,7 +134,7 @@ public void CargarRegistrar(){
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
         jLabel2.setText("Datos del juego");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(350, 60, 210, 70);
+        jLabel2.setBounds(540, 70, 210, 70);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(jLabel1);
@@ -129,7 +142,10 @@ public void CargarRegistrar(){
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Método para regresar a mi JFRAME OpcionesFinales 
+ * @param evt 
+ */
     private void jButtonRegresarEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRegresarEActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
@@ -138,7 +154,10 @@ public void CargarRegistrar(){
         setSize(825, 866);
           dispose();
     }//GEN-LAST:event_jButtonRegresarEActionPerformed
-
+/**
+ * Método para salir del juego
+ * @param evt 
+ */
     private void jButtonSalirEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirEActionPerformed
         // TODO add your handling code here:
         System.exit(0);

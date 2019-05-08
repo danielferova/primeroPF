@@ -160,31 +160,23 @@ public class JuegoTableros extends javax.swing.JFrame {
         for (int i = 0; i<filas; i++){
             for (int j = 0; j<columnas; j++){
 
-              //  blanco = !blanco;
-              //  tablero[i][j] = new Casilla ();
-            //   tablero[i][j].setSize(50, 50);
-             /*   if (blanco)
+                blanco = !blanco;
+                tablero[i][j] = new Casilla ();
+               tablero[i][j].setSize(50, 50);
+                if (blanco)
                     tablero[i][j].setBackground(Color.white);
                 else
-                    tablero[i][j].setBackground(Color.white);*/
-                blanco = !blanco;
+                    tablero[i][j].setBackground(Color.white);
+               // blanco = !blanco;
              //tablero[i][j]= new CasillaTerreno();
-               //tablero[i][j].setSize(50, 50);
+              // tablero[i][j].setSize(50, 50);
 
                 
-               if (blanco) {
-                    tablero[i][j]= new CasillaTerreno();
-                   tablero[i][j].setSize(50, 50);
-                   if (blanco){
-                        tablero[i][j] = new CasillaMontaña();
-                   } 
-                   else
-                       tablero[i][j] = new CasillaAgua();
-               }
-              //  if (blanco)
-                //    tablero[i][j] = new CasillaMontaña();
-                //else
-                  //  tablero[i][j] = new CasillaAgua();
+               
+             //   if (blanco)
+               //     tablero[i][j] = new CasillaMontaña();
+              //  else
+                //    tablero[i][j] = new CasillaAgua();
 
                 
                 tablero[i][j].setVisible(true);
@@ -196,8 +188,8 @@ public class JuegoTableros extends javax.swing.JFrame {
                  this.add(tablero[i][j], BorderLayout.CENTER);
                this.add(panelTablero);
                      panelTablero.add(tablero[i][j]);
-             //    panelTablero.removeAll();
-            panelTablero.validate();
+               //  panelTablero.removeAll();
+       //     panelTablero.validate();
             panelTablero.repaint();
             tablero[i][j].removeAll();
            //tablero[i][j].repaint();
@@ -229,16 +221,6 @@ public class JuegoTableros extends javax.swing.JFrame {
         
     }*/
 }
-    
-     public void escenarioOne(){
-        //tierra
-        for (int i = 0; i < 12; i++) {
-            for (int j = 0; j < 12; j++) {
-                tablero[i][j] = new CasillaTerreno();
-
-            }
-        }
-    }
      
     private void jButton4x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4x4ActionPerformed
         // TODO add your handling code here:

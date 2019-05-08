@@ -12,6 +12,7 @@ package VistasInterfazD;
 public class OpcionesJuego extends javax.swing.JFrame {
 
     /**
+     * Constructor de mi JFRAME OpcionesJuego
      * Creates new form OpcionesJuego
      */
     public OpcionesJuego() {
@@ -33,7 +34,7 @@ public class OpcionesJuego extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jButtonSalirOP = new javax.swing.JButton();
         jButtonJJ = new javax.swing.JButton();
-        jButtonOPTienda = new javax.swing.JButton();
+        jButtonRTienda = new javax.swing.JButton();
         jButtonJC = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -71,17 +72,17 @@ public class OpcionesJuego extends javax.swing.JFrame {
         getContentPane().add(jButtonJJ);
         jButtonJJ.setBounds(240, 330, 350, 120);
 
-        jButtonOPTienda.setBackground(new java.awt.Color(0, 0, 0));
-        jButtonOPTienda.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
-        jButtonOPTienda.setForeground(new java.awt.Color(255, 0, 0));
-        jButtonOPTienda.setText("Regresar");
-        jButtonOPTienda.addActionListener(new java.awt.event.ActionListener() {
+        jButtonRTienda.setBackground(new java.awt.Color(0, 0, 0));
+        jButtonRTienda.setFont(new java.awt.Font("Gill Sans MT", 3, 24)); // NOI18N
+        jButtonRTienda.setForeground(new java.awt.Color(255, 0, 0));
+        jButtonRTienda.setText("Regresar");
+        jButtonRTienda.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonOPTiendaActionPerformed(evt);
+                jButtonRTiendaActionPerformed(evt);
             }
         });
-        getContentPane().add(jButtonOPTienda);
-        jButtonOPTienda.setBounds(50, 660, 250, 90);
+        getContentPane().add(jButtonRTienda);
+        jButtonRTienda.setBounds(50, 660, 250, 90);
 
         jButtonJC.setBackground(new java.awt.Color(0, 0, 0));
         jButtonJC.setFont(new java.awt.Font("Haettenschweiler", 3, 24)); // NOI18N
@@ -101,21 +102,30 @@ public class OpcionesJuego extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButtonOPTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonOPTiendaActionPerformed
+/**
+ * Método para regresar a mi JFRAME tienda
+ * @param evt 
+ */
+    private void jButtonRTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRTiendaActionPerformed
         // TODO add your handling code here:
         this.setVisible(false);
 
         new Iniciar().setVisible(true);
         setSize(825, 866);
         dispose();
-    }//GEN-LAST:event_jButtonOPTiendaActionPerformed
-
+    }//GEN-LAST:event_jButtonRTiendaActionPerformed
+/**
+ * Botón salir
+ * @param evt 
+ */
     private void jButtonSalirOPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirOPActionPerformed
         // TODO add your handling code here:
           System.exit(0);
     }//GEN-LAST:event_jButtonSalirOPActionPerformed
-
+/**
+ * Método para ir a Registrar Usuario y elegir sus tres vehículos de Jugador vs Computadora
+ * @param evt 
+ */
     private void jButtonJCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJCActionPerformed
         // TODO add your handling code here:
           Registrar entrada2 = new Registrar();
@@ -123,7 +133,10 @@ public class OpcionesJuego extends javax.swing.JFrame {
         entrada2.setSize(1290, 1000);
         dispose();
     }//GEN-LAST:event_jButtonJCActionPerformed
-
+/**
+ * Método para ir a Regsitrar a los dos usuarios y los 6 vehículos de JUGADOR VS JUGADOR
+ * @param evt 
+ */
     private void jButtonJJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJJActionPerformed
         // TODO add your handling code here:
           JuegoTableros entrada2 = new JuegoTableros();
@@ -170,7 +183,7 @@ public class OpcionesJuego extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonJC;
     private javax.swing.JButton jButtonJJ;
-    private javax.swing.JButton jButtonOPTienda;
+    private javax.swing.JButton jButtonRTienda;
     private javax.swing.JButton jButtonSalirOP;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -9,20 +9,6 @@ package ClasesdelProyecto;
  *
  * @author danie
  */
-public class Usuario {
-
-    private final String nombre;
-/**
- * Constructor de clase Usuario
- * @param nombre 
- */
-    public Usuario(String nombre) {
-        
-        this.nombre = nombre;
-    }
-    
-    
-    
-    
-    
+public class Enemigos extends Vehículos{
+   // protected int hp=40+(nivel*5),punteria=50+(nivel*5),ataque=8+(nivel*2), defensa=2+(nivel*2);
 }

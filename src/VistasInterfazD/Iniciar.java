@@ -12,6 +12,7 @@ package VistasInterfazD;
 public class Iniciar extends javax.swing.JFrame {
 
     /**
+     * Constructor de mi JFRAME Iniciar
      * Creates new form Iniciar
      */
     public Iniciar() {
@@ -108,7 +109,10 @@ public class Iniciar extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Método para regresar al Bienvenido
+ * @param evt 
+ */
     private void jButtonRBienvenidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonRBienvenidoActionPerformed
         // TODO add your handling code here:
          this.setVisible(false);
@@ -118,7 +122,10 @@ public class Iniciar extends javax.swing.JFrame {
           dispose();
        
     }//GEN-LAST:event_jButtonRBienvenidoActionPerformed
-
+/**
+ * Método para ir JFRAME tienda
+ * @param evt 
+ */
     private void jButtonTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTiendaActionPerformed
         // TODO add your handling code here:
         Tienda entrada4 = new Tienda();
@@ -126,7 +133,10 @@ public class Iniciar extends javax.swing.JFrame {
         entrada4.setSize(825, 866);
         dispose();
     }//GEN-LAST:event_jButtonTiendaActionPerformed
-
+/**
+ * Método para ir a JFRAME OpcionesJuego
+ * @param evt 
+ */
     private void jButtonSiguiente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSiguiente2ActionPerformed
         // TODO add your handling code here:
        OpcionesJuego opcion = new OpcionesJuego();

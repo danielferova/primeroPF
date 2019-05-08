@@ -12,6 +12,7 @@ import javax.swing.JButton;
  * @author danie
  */
 public class Casilla extends JButton {
+    
     private Usuario usuario;
     
     

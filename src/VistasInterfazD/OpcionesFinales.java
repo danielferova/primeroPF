@@ -12,6 +12,7 @@ package VistasInterfazD;
 public class OpcionesFinales extends javax.swing.JFrame {
 
     /**
+     * Constructor de JFRAME de OpcionesFinales
      * Creates new form Estadisticas
      */
     public OpcionesFinales() {
@@ -51,7 +52,7 @@ public class OpcionesFinales extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonSalirFinal);
-        jButtonSalirFinal.setBounds(500, 700, 280, 70);
+        jButtonSalirFinal.setBounds(480, 700, 280, 70);
 
         jButtonReportes.setBackground(new java.awt.Color(0, 0, 0));
         jButtonReportes.setFont(new java.awt.Font("Dubai Medium", 3, 36)); // NOI18N
@@ -92,7 +93,7 @@ public class OpcionesFinales extends javax.swing.JFrame {
         jButtonEstadisticas.setBackground(new java.awt.Color(0, 0, 0));
         jButtonEstadisticas.setFont(new java.awt.Font("Dubai Medium", 3, 36)); // NOI18N
         jButtonEstadisticas.setForeground(new java.awt.Color(255, 0, 0));
-        jButtonEstadisticas.setText("Estadísticas ");
+        jButtonEstadisticas.setText("Estadísticas del Juego");
         jButtonEstadisticas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonEstadisticasActionPerformed(evt);
@@ -107,7 +108,10 @@ public class OpcionesFinales extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Método para ir a mi JFRAME Iniciar
+ * @param evt 
+ */
     private void jButtonNuevoJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonNuevoJuegoActionPerformed
         // TODO add your handling code here:
         Iniciar nuevo = new Iniciar();
@@ -115,20 +119,32 @@ public class OpcionesFinales extends javax.swing.JFrame {
         nuevo.setSize(825, 866);
         dispose();
     }//GEN-LAST:event_jButtonNuevoJuegoActionPerformed
-
+/**
+ * Método para ir a Guardar partida
+ * @param evt 
+ */
     private void jButtonGuardarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonGuardarJuegoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonGuardarJuegoActionPerformed
-
+/**
+ * Método para ir JFRAME reportes
+ * @param evt 
+ */
     private void jButtonReportesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonReportesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonReportesActionPerformed
-
+/**
+ * Método para salir del juego
+ * @param evt 
+ */
     private void jButtonSalirFinalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirFinalActionPerformed
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButtonSalirFinalActionPerformed
-
+/**
+ * Método para ir a mi JFRAME Estadística 
+ * @param evt 
+ */
     private void jButtonEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstadisticasActionPerformed
         // TODO add your handling code here:
         Estadisticas e = new Estadisticas();

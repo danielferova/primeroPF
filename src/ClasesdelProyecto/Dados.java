@@ -9,20 +9,6 @@ package ClasesdelProyecto;
  *
  * @author danie
  */
-public class Usuario {
-
-    private final String nombre;
-/**
- * Constructor de clase Usuario
- * @param nombre 
- */
-    public Usuario(String nombre) {
-        
-        this.nombre = nombre;
-    }
-    
-    
-    
-    
+public class Dados {
     
 }

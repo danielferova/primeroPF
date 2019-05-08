@@ -14,6 +14,9 @@ public class Bienvenido extends javax.swing.JFrame {
     /**
      * Creates new form Bienvenido
      */
+    /**
+     * Constructor de mi JFRAME Bienvenido
+     */
     public Bienvenido() {
         initComponents();
          this.setLocationRelativeTo(null);
@@ -83,7 +86,10 @@ public class Bienvenido extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+/**
+ * Método de mi botón jugar 
+ * @param evt 
+ */
     private void ButtonJugarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonJugarActionPerformed
         // TODO add your handling code here:
         
@@ -91,17 +97,11 @@ public class Bienvenido extends javax.swing.JFrame {
         entrada1.show();
         entrada1.setSize(825, 866);
         dispose();
-        
-        /*  Juego j = new Juego();
-        }j.setSize(1190, 770);
-        j.setLocation(5,5);
-
-        panelPrincipal.removeAll();
-        panelPrincipal.add(j, BorderLayout.CENTER);
-        panelPrincipal.revalidate();
-        panelPrincipal.repaint();*/
     }//GEN-LAST:event_ButtonJugarActionPerformed
-
+/**
+ * Método para salir del juego
+ * @param evt 
+ */
     private void ButtonSalir1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtonSalir1ActionPerformed
         // TODO add your handling code here:
         System.exit(0);
