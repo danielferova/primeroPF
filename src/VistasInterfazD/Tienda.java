@@ -152,7 +152,7 @@ public class Tienda extends javax.swing.JFrame {
         // TODO add your handling code here:
         Comprar m = new Comprar();
         m.show();
-        m.setSize(1290, 1000);
+        m.setSize(1290, 900);
         dispose();
     }//GEN-LAST:event_jButtonComprarActionPerformed
 

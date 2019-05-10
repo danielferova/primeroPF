@@ -116,7 +116,7 @@ public class CrearTanques extends javax.swing.JFrame {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Ingrese Defensa:");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(240, 510, 420, 40);
+        jLabel10.setBounds(240, 520, 420, 40);
 
         jTextFieldV5.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV5.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -127,7 +127,7 @@ public class CrearTanques extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV5);
-        jTextFieldV5.setBounds(510, 510, 310, 40);
+        jTextFieldV5.setBounds(510, 520, 310, 40);
 
         jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -224,7 +224,7 @@ public class CrearTanques extends javax.swing.JFrame {
         //lista.add(persona);
         this.setVisible(false);
 
-        new CrearVehículos ().setVisible(true);
+        new CrearVehiculos ().setVisible(true);
 
         setSize(1290, 1000);
         dispose();

@@ -36,6 +36,8 @@ public class CrearAviones extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
+        jTextFieldV7 = new javax.swing.JTextField();
+        jComboBoxV1 = new javax.swing.JComboBox<>();
         jTextFieldV6 = new javax.swing.JTextField();
         jTextFieldV1 = new javax.swing.JTextField();
         jTextFieldV2 = new javax.swing.JTextField();
@@ -66,7 +68,7 @@ public class CrearAviones extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 48)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 255, 0));
-        jLabel4.setText("Crear Aviones");
+        jLabel4.setText("Crear Vehículos");
         getContentPane().add(jLabel4);
         jLabel4.setBounds(580, 70, 470, 40);
 
@@ -74,7 +76,7 @@ public class CrearAviones extends javax.swing.JFrame {
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Ingrese Velocidad:");
         getContentPane().add(jLabel9);
-        jLabel9.setBounds(190, 500, 420, 40);
+        jLabel9.setBounds(190, 530, 420, 40);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/aviones.jpg"))); // NOI18N
         jLabel2.setText("jLabel2");
@@ -83,15 +85,42 @@ public class CrearAviones extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Ingrese nombre del Avión:");
+        jLabel11.setText("Ingrese nombre del Vehículo:");
         getContentPane().add(jLabel11);
-        jLabel11.setBounds(70, 210, 420, 40);
+        jLabel11.setBounds(20, 330, 510, 40);
 
         jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Ingrese Defensa:");
         getContentPane().add(jLabel10);
-        jLabel10.setBounds(210, 440, 420, 40);
+        jLabel10.setBounds(210, 480, 420, 40);
+
+        jTextFieldV7.setBackground(new java.awt.Color(255, 255, 255));
+        jTextFieldV7.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
+        jTextFieldV7.setForeground(new java.awt.Color(0, 0, 0));
+        jTextFieldV7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextFieldV7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextFieldV7);
+        jTextFieldV7.setBounds(490, 240, 310, 40);
+
+        jComboBoxV1.setFont(new java.awt.Font("Dubai", 3, 36)); // NOI18N
+        jComboBoxV1.setForeground(new java.awt.Color(255, 0, 51));
+        jComboBoxV1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Elija Vehículo", "Avión", "Tanque", " " }));
+        jComboBoxV1.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                jComboBoxV1ItemStateChanged(evt);
+            }
+        });
+        jComboBoxV1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxV1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jComboBoxV1);
+        jComboBoxV1.setBounds(200, 230, 270, 60);
 
         jTextFieldV6.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV6.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -102,7 +131,7 @@ public class CrearAviones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV6);
-        jTextFieldV6.setBounds(490, 500, 310, 40);
+        jTextFieldV6.setBounds(490, 530, 310, 40);
 
         jTextFieldV1.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV1.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -113,7 +142,7 @@ public class CrearAviones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV1);
-        jTextFieldV1.setBounds(490, 220, 310, 40);
+        jTextFieldV1.setBounds(490, 330, 310, 40);
 
         jTextFieldV2.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV2.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -124,7 +153,7 @@ public class CrearAviones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV2);
-        jTextFieldV2.setBounds(490, 300, 310, 40);
+        jTextFieldV2.setBounds(490, 380, 310, 40);
 
         jTextFieldV5.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV5.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -135,19 +164,19 @@ public class CrearAviones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV5);
-        jTextFieldV5.setBounds(490, 440, 310, 40);
+        jTextFieldV5.setBounds(490, 480, 310, 40);
 
         jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("Ingrese Mejora:");
+        jLabel5.setText("Ingrese Puntería:");
         getContentPane().add(jLabel5);
-        jLabel5.setBounds(230, 300, 420, 40);
+        jLabel5.setBounds(210, 380, 420, 40);
 
         jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Ingrese Ataque:");
         getContentPane().add(jLabel6);
-        jLabel6.setBounds(230, 370, 420, 40);
+        jLabel6.setBounds(230, 430, 420, 40);
 
         jTextFieldV3.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV3.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -158,13 +187,13 @@ public class CrearAviones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV3);
-        jTextFieldV3.setBounds(490, 370, 310, 40);
+        jTextFieldV3.setBounds(490, 430, 310, 40);
 
         jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 3, 36)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("COSTO DEL AVIÓN:");
+        jLabel7.setText("COSTO DEL VEHÍCULO:");
         getContentPane().add(jLabel7);
-        jLabel7.setBounds(190, 560, 420, 40);
+        jLabel7.setBounds(140, 590, 420, 40);
 
         jTextFieldV4.setBackground(new java.awt.Color(255, 255, 255));
         jTextFieldV4.setFont(new java.awt.Font("Ebrima", 3, 24)); // NOI18N
@@ -175,12 +204,12 @@ public class CrearAviones extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextFieldV4);
-        jTextFieldV4.setBounds(490, 560, 310, 40);
+        jTextFieldV4.setBounds(490, 590, 310, 40);
 
         jButtonCrearA.setBackground(new java.awt.Color(255, 255, 255));
         jButtonCrearA.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
         jButtonCrearA.setForeground(new java.awt.Color(0, 255, 0));
-        jButtonCrearA.setText("Guardar avión");
+        jButtonCrearA.setText("Guardar Vehículo");
         jButtonCrearA.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButtonCrearAActionPerformed(evt);
@@ -256,7 +285,7 @@ public class CrearAviones extends javax.swing.JFrame {
         //lista.add(persona);
         this.setVisible(false);
 
-        new CrearVehículos ().setVisible(true);
+        new CrearVehiculos ().setVisible(true);
 
         setSize(1290, 1000);
         dispose();
@@ -276,6 +305,20 @@ public class CrearAviones extends javax.swing.JFrame {
         jTextFieldV2.setText("");
         jTextFieldV3.setText("");*/
     }//GEN-LAST:event_jButtonRegresarTiposActionPerformed
+
+    private void jComboBoxV1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBoxV1ItemStateChanged
+        // TODO add your handling code here:
+        this.jTextFieldV7.setText("= "+jComboBoxV1.getSelectedItem().toString());
+    }//GEN-LAST:event_jComboBoxV1ItemStateChanged
+
+    private void jComboBoxV1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxV1ActionPerformed
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_jComboBoxV1ActionPerformed
+
+    private void jTextFieldV7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldV7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextFieldV7ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -315,6 +358,7 @@ public class CrearAviones extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonCrearA;
     private javax.swing.JButton jButtonRegresarTipos;
+    private javax.swing.JComboBox<String> jComboBoxV1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -331,5 +375,6 @@ public class CrearAviones extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldV4;
     private javax.swing.JTextField jTextFieldV5;
     private javax.swing.JTextField jTextFieldV6;
+    private javax.swing.JTextField jTextFieldV7;
     // End of variables declaration//GEN-END:variables
 }

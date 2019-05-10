@@ -9,13 +9,13 @@ package VistasInterfazD;
  *
  * @author danie
  */
-public class CrearVehículos extends javax.swing.JFrame {
+public class CrearVehiculos extends javax.swing.JFrame {
 
     /**
      * Contructor de mi JFRAME CrearVehículos
      * Creates new form CrearVehículos
      */
-    public CrearVehículos() {
+    public CrearVehiculos() {
         initComponents();
          this.setLocationRelativeTo(null);
            setSize(1290, 1000);
@@ -154,20 +154,21 @@ public class CrearVehículos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CrearVehículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CrearVehículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CrearVehículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CrearVehículos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(CrearVehiculos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CrearVehículos().setVisible(true);
+                new CrearVehiculos().setVisible(true);
             }
         });
     }

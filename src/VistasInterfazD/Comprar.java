@@ -16,6 +16,9 @@ public class Comprar extends javax.swing.JFrame {
      */
     public Comprar() {
         initComponents();
+        this.setLocationRelativeTo(null);
+           setSize(1290, 900);
+           setTitle("FEROVA GAME");
     }
 
     /**
@@ -53,7 +56,7 @@ public class Comprar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonrTienda);
-        jButtonrTienda.setBounds(80, 600, 260, 100);
+        jButtonrTienda.setBounds(40, 620, 260, 100);
 
         jButtonComprarBoots.setBackground(new java.awt.Color(255, 255, 255));
         jButtonComprarBoots.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
@@ -65,7 +68,7 @@ public class Comprar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonComprarBoots);
-        jButtonComprarBoots.setBounds(600, 440, 450, 120);
+        jButtonComprarBoots.setBounds(100, 450, 450, 120);
 
         jButtonComprarV.setBackground(new java.awt.Color(255, 255, 255));
         jButtonComprarV.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
@@ -77,7 +80,7 @@ public class Comprar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonComprarV);
-        jButtonComprarV.setBounds(540, 290, 560, 120);
+        jButtonComprarV.setBounds(50, 310, 560, 120);
 
         jButtonComprarArmas.setBackground(new java.awt.Color(255, 255, 255));
         jButtonComprarArmas.setFont(new java.awt.Font("Dubai", 3, 48)); // NOI18N
@@ -89,11 +92,11 @@ public class Comprar extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButtonComprarArmas);
-        jButtonComprarArmas.setBounds(590, 130, 450, 120);
+        jButtonComprarArmas.setBounds(110, 170, 450, 120);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 1810, 761);
+        jLabel1.setBounds(0, 0, 1810, 860);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -105,21 +108,7 @@ public class Comprar extends javax.swing.JFrame {
         entrada2.setSize(1290, 1000);
         dispose();
 
-        /*Sring nombre = jTextFieldNombre.getText();
-        String v1 = jTextFieldV1.getText();
-        String v2 = jTextFieldV2.getText();
-        String v3 = jTextFieldV3.getText();
-        String tipo1 = Jmostrar1.getText();
-        String tipo2 = Jmostrar2.getText();
-        String tipo3 = Jmostrar3.getText();
-        //NOMBRE DE LA PERSONA ATRUBUTOS
-        Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);
-        contenedor.add(person);
-        //Limpia
-        jTextFieldNombre.setText("");
-        jTextFieldV1.setText("");
-        jTextFieldV2.setText("");
-        jTextFieldV3.setText("");*/
+     
     }//GEN-LAST:event_jButtonComprarArmasActionPerformed
 
     private void jButtonComprarVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonComprarVActionPerformed
@@ -132,29 +121,14 @@ public class Comprar extends javax.swing.JFrame {
 
     private void jButtonrTiendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonrTiendaActionPerformed
         // TODO add your handling code here:
-        //Persona persona = new Persona(jTextFieldNombre.getText() );
-        //lista.add(persona);
+       
         this.setVisible(false);
 
-        new CrearVehículos ().setVisible(true);
+        new Tienda ().setVisible(true);
 
         setSize(1290, 1000);
         dispose();
-        /*  String nombre = jTextFieldNombre.getText();
-        String v1 = jTextFieldV1.getText();
-        String v2 = jTextFieldV2.getText();
-        String v3 = jTextFieldV3.getText();
-        String tipo1 = Jmostrar1.getText();
-        String tipo2 = Jmostrar2.getText();
-        String tipo3 = Jmostrar3.getText();
-        //NOMBRE DE LA PERSONA ATRUBUTOS
-        Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);
-        contenedor.add(person);
-        //Limpia
-        jTextFieldNombre.setText("");
-        jTextFieldV1.setText("");
-        jTextFieldV2.setText("");
-        jTextFieldV3.setText("");*/
+       
     }//GEN-LAST:event_jButtonrTiendaActionPerformed
 
     /**
