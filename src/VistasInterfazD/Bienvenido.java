@@ -19,7 +19,7 @@ public class Bienvenido extends javax.swing.JFrame {
      */
     public Bienvenido() {
         initComponents();
-         this.setLocationRelativeTo(null);
+        
            setSize(1190, 860);
          setTitle("FEROVA GAME");
     }
@@ -65,6 +65,11 @@ public class Bienvenido extends javax.swing.JFrame {
         jButtonInstrucciones.setFont(new java.awt.Font("Gill Sans Ultra Bold", 3, 36)); // NOI18N
         jButtonInstrucciones.setForeground(new java.awt.Color(51, 255, 51));
         jButtonInstrucciones.setText("2. INSTRUCCIONES");
+        jButtonInstrucciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInstruccionesActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButtonInstrucciones);
         jButtonInstrucciones.setBounds(50, 320, 520, 130);
 
@@ -106,6 +111,10 @@ public class Bienvenido extends javax.swing.JFrame {
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_ButtonSalir1ActionPerformed
+
+    private void jButtonInstruccionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInstruccionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButtonInstruccionesActionPerformed
 
     /**
      * @param args the command line arguments

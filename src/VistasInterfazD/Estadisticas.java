@@ -6,6 +6,7 @@
 package VistasInterfazD;
 
 import ClasesdelProyecto.Persona;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -62,7 +63,7 @@ public void CargarRegistrar(){
                     modelo.setValueAt(a.getV3(), cont, 5);
                      modelo.setValueAt(a.getTipo1(), cont, 2);
                      modelo.setValueAt(a.getTipo2(), cont, 4);
-                             modelo.setValueAt(a.getTipo3(), cont, 6);
+                     modelo.setValueAt(a.getTipo3(), cont, 6);
                      
                     
                     
@@ -82,6 +83,9 @@ public void CargarRegistrar(){
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabelNuevo = new javax.swing.JLabel();
+        JBBorrar = new javax.swing.JButton();
+        jBActualizar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableEstadisticas = new javax.swing.JTable();
         jButtonRegresarE = new javax.swing.JButton();
@@ -91,6 +95,34 @@ public void CargarRegistrar(){
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
+
+        jLabelNuevo.setFont(new java.awt.Font("Dialog", 3, 18)); // NOI18N
+        jLabelNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelNuevo.setText("jLabel3");
+        getContentPane().add(jLabelNuevo);
+        jLabelNuevo.setBounds(410, 90, 300, 60);
+
+        JBBorrar.setFont(new java.awt.Font("Dubai", 3, 24)); // NOI18N
+        JBBorrar.setForeground(new java.awt.Color(0, 0, 0));
+        JBBorrar.setText("Borrar");
+        JBBorrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JBBorrarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(JBBorrar);
+        JBBorrar.setBounds(730, 870, 124, 40);
+
+        jBActualizar.setFont(new java.awt.Font("Dubai", 3, 24)); // NOI18N
+        jBActualizar.setForeground(new java.awt.Color(0, 0, 0));
+        jBActualizar.setText("Actualizar");
+        jBActualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBActualizarActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jBActualizar);
+        jBActualizar.setBounds(520, 870, 170, 40);
 
         jTableEstadisticas.setFont(new java.awt.Font("Dubai", 3, 18)); // NOI18N
         jTableEstadisticas.setModel(new javax.swing.table.DefaultTableModel(
@@ -134,11 +166,11 @@ public void CargarRegistrar(){
         jLabel2.setForeground(new java.awt.Color(0, 255, 0));
         jLabel2.setText("Datos del juego");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(540, 70, 210, 70);
+        jLabel2.setBounds(560, 20, 210, 70);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/FinesseGrande.png"))); // NOI18N
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 10, 1810, 1300);
+        jLabel1.setBounds(0, 0, 1810, 1310);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -162,6 +194,37 @@ public void CargarRegistrar(){
         // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_jButtonSalirEActionPerformed
+
+    private void JBBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JBBorrarActionPerformed
+
+        if(jTableEstadisticas.getSelectedRow()==-1){
+            if(jTableEstadisticas.getRowCount()<=0){
+                jLabelNuevo.setText("No hay datos todavía en la tabla");
+            }else{
+                jLabelNuevo.setText("Seleccione primero una fila o un dato");
+            }
+        }else{
+            if(JOptionPane.showConfirmDialog(null,"¿seguro que lo quieres eliminar?")==0){
+                DefaultTableModel model = (DefaultTableModel) jTableEstadisticas.getModel();
+                model.removeRow(jTableEstadisticas.getSelectedRow());
+            }
+        }
+    }//GEN-LAST:event_JBBorrarActionPerformed
+
+    private void jBActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBActualizarActionPerformed
+        if(jTableEstadisticas.getSelectedRow()==-1){
+            if(jTableEstadisticas.getRowCount()<=0){
+                jLabelNuevo.setText("No hay información en la tabla");
+            }else{
+                jLabelNuevo.setText("Seleccione primero una fila o un dato");
+            }
+        }else{
+            DefaultTableModel model = (DefaultTableModel) jTableEstadisticas.getModel();
+            //modelo.setValueAt(this.jtxtNombre.getText(), jTableEstadisticas.getSelectedRow(), 0);
+           // modelo.setValueAt(this.jtxtPunteo.getText(), jTableEstadisticas.getSelectedRow(), 1);
+           // modelo.setValueAt(this.jtxtFecha.getText(), jTableEstadisticas.getSelectedRow(), 2);
+        }
+    }//GEN-LAST:event_jBActualizarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,10 +262,13 @@ public void CargarRegistrar(){
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton JBBorrar;
+    private javax.swing.JButton jBActualizar;
     private javax.swing.JButton jButtonRegresarE;
     private javax.swing.JButton jButtonSalirE;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabelNuevo;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableEstadisticas;
     // End of variables declaration//GEN-END:variables

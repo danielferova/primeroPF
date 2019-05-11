@@ -128,6 +128,7 @@ public class OpcionesJuego extends javax.swing.JFrame {
  */
     private void jButtonJCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJCActionPerformed
         // TODO add your handling code here:
+        
           Registrar entrada2 = new Registrar();
         entrada2.show();
         entrada2.setSize(1290, 1000);
@@ -139,9 +140,10 @@ public class OpcionesJuego extends javax.swing.JFrame {
  */
     private void jButtonJJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonJJActionPerformed
         // TODO add your handling code here:
+   
           JuegoTableros entrada2 = new JuegoTableros();
         entrada2.show();
-        entrada2.setSize(1290, 1000);
+       entrada2.setSize(1290, 1000);
         dispose();
     }//GEN-LAST:event_jButtonJJActionPerformed
 
