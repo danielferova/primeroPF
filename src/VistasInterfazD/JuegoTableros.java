@@ -12,7 +12,10 @@ import ClasesdelProyecto.CasillaTerreno;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.awt.Image;
 import java.util.Random;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
@@ -86,11 +89,12 @@ public class JuegoTableros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton8x9);
-        jButton8x9.setBounds(760, 210, 140, 60);
+        jButton8x9.setBounds(840, 370, 140, 60);
 
         jButton4x4.setBackground(new java.awt.Color(255, 255, 255));
         jButton4x4.setFont(new java.awt.Font("Dubai Medium", 0, 36)); // NOI18N
         jButton4x4.setForeground(new java.awt.Color(0, 255, 0));
+        jButton4x4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/ImagenesD/tanquepequeño.jpg"))); // NOI18N
         jButton4x4.setText("4 x 4");
         jButton4x4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -98,7 +102,7 @@ public class JuegoTableros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4x4);
-        jButton4x4.setBounds(760, 70, 140, 60);
+        jButton4x4.setBounds(670, 70, 340, 130);
 
         jButton6x4.setBackground(new java.awt.Color(255, 255, 255));
         jButton6x4.setFont(new java.awt.Font("Dubai Medium", 0, 36)); // NOI18N
@@ -110,7 +114,7 @@ public class JuegoTableros extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6x4);
-        jButton6x4.setBounds(760, 140, 140, 60);
+        jButton6x4.setBounds(670, 220, 340, 130);
 
         panelTablero.setForeground(new java.awt.Color(255, 255, 255));
 
@@ -148,7 +152,7 @@ public class JuegoTableros extends javax.swing.JFrame {
         OpcionesFinales entrada3 = new OpcionesFinales();
         entrada3.show();
         entrada3.setSize(825, 866);
-       dispose();    
+            dispose();    
     }//GEN-LAST:event_jButtonHaciaEActionPerformed
     /**
      * Método para mostrar el tablero, código generico
@@ -166,6 +170,7 @@ public class JuegoTableros extends javax.swing.JFrame {
          System.out.println("filas" + filas);
         for (int i = 0; i<filas; i++){
             for (int j = 0; j<columnas; j++){
+                
                 int c = (int)((Math.random()*3)+1);
                 System.out.println(c);
                 switch(c){
@@ -229,12 +234,26 @@ public class JuegoTableros extends javax.swing.JFrame {
          //   tablero[i][j].removeAll();
            //tablero[i][j].repaint();
             
+           
+     
+           
             }
-            
+           
             blanco = !blanco;
         }
-       
         
+        int d = (int) (Math.random()*4);
+        int d2 = (int) (Math.random()*4);
+              ImageIcon tanque = new ImageIcon("src/ImagenesD/tanquepequeño.jpg");
+        Icon iconoTanque = new ImageIcon(tanque.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+        tablero[d][d2].setIcon(iconoTanque);
+        juego[d][d2] = 5;
+        
+        
+            ImageIcon avion = new ImageIcon("src/ImagenesD/avionpequeño.jpg");
+        Icon iconoAvion = new ImageIcon(avion.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+         tablero[d][d2].setIcon(iconoAvion);
+        juego[d][d2] = 4;
         
         
         
@@ -316,7 +335,11 @@ public class JuegoTableros extends javax.swing.JFrame {
     
     private void jButton4x4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4x4ActionPerformed
         // TODO add your handling code here:
-         
+        /*ImageIcon tanque = new ImageIcon("src/ImagenesD/tanquepequeño.jpg");
+        Icon iconoTanque = new ImageIcon(tanque.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+        tablero[filas][columnas].setIcon(iconoTanque);
+        juego[filas][columnas] = 2;*/
+        
         gTablero(4, 4);
        
         

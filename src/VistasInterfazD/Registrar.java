@@ -5,7 +5,10 @@
  */
 package VistasInterfazD;
 
+import ClasesdelProyecto.Avion;
 import ClasesdelProyecto.Persona;
+import ClasesdelProyecto.Tanque;
+import ClasesdelProyecto.Vehiculos;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -16,6 +19,7 @@ import java.util.LinkedList;
 public class Registrar extends javax.swing.JFrame {
   //  ArrayList<Persona> lista = new ArrayList<Persona>();
     public static LinkedList contenedor = new LinkedList();
+    
     public int buscar;
     
     /**
@@ -250,7 +254,7 @@ public class Registrar extends javax.swing.JFrame {
         jTextFieldV3.setText("");*/      
     }//GEN-LAST:event_jButtonRegresarTiposActionPerformed
 /**
- * Método para ir mi JFRAME JuegoTableros donde esta mis 3 tipos de tableros
+ * Método para ir a mi JFRAME JuegoTableros donde esta mis 3 tipos de tableros
  * @param evt 
  */
     private void jButtonIRActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonIRActionPerformed
@@ -261,6 +265,10 @@ public class Registrar extends javax.swing.JFrame {
         dispose();
         
         
+       // ImageIcon tanque = new ImageIcon("src/ImagenesD/tanquepequeño.jpg");
+       // Icon iconoTanque = new ImageIcon(tanque.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+        
+        
         String nombre = jTextFieldNombre.getText();
         String v1 = jTextFieldV1.getText();
         String v2 = jTextFieldV2.getText();
@@ -268,7 +276,16 @@ public class Registrar extends javax.swing.JFrame {
         String tipo1 = Jmostrar1.getText();
         String tipo2 = Jmostrar2.getText();
         String tipo3 = Jmostrar3.getText();
-        //NOMBRE DE LA PERSONA ATRUBUTOS
+        
+        
+       //nombre de la clase tanque y vehiculos
+        Vehiculos v = new Tanque();
+        contenedor.add(v);
+        //nombre de la clase avion y vehiculos
+         Vehiculos ve = new Avion();
+        contenedor.add(ve);
+        
+         //NOMBRE DE LA PERSONA ATRUBUTOS
         Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);
         contenedor.add(person);
         //Limpia

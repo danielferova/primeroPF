@@ -5,6 +5,9 @@
  */
 package ClasesdelProyecto;
 
+import java.awt.Image;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 
 /**
@@ -16,6 +19,44 @@ abstract public class Vehiculos extends JButton{
      int hp, pp, nivel, experiencia;
     int ataque, defensa, punteria;
     String nombre, arma, tipoarma = "Arma Basica";
+    ImageIcon tanque = new ImageIcon("src/ImagenesD/tanquepequeño.jpg");
+        Icon iconoTanque = new ImageIcon(tanque.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+        
+        ImageIcon avion = new ImageIcon("src/ImagenesD/tanquepequeño.jpg");
+
+    public ImageIcon getTanque() {
+        return tanque;
+    }
+
+    public void setTanque(ImageIcon tanque) {
+        this.tanque = tanque;
+    }
+
+    public Icon getIconoTanque() {
+        return iconoTanque;
+    }
+
+    public void setIconoTanque(Icon iconoTanque) {
+        this.iconoTanque = iconoTanque;
+    }
+
+    public ImageIcon getAvion() {
+        return avion;
+    }
+
+    public void setAvion(ImageIcon avion) {
+        this.avion = avion;
+    }
+
+    public Icon getIconoAvion() {
+        return iconoAvion;
+    }
+
+    public void setIconoAvion(Icon iconoAvion) {
+        this.iconoAvion = iconoAvion;
+    }
+        Icon iconoAvion = new ImageIcon(avion.getImage().getScaledInstance(50, 50, Image.SCALE_SMOOTH));
+    
     /**
      * Constructor
      * @param hp
@@ -25,6 +66,8 @@ abstract public class Vehiculos extends JButton{
      * @param nombre
      * @param arma 
      */
+        
+        
      public Vehiculos(int hp, int pp, int nivel, int experiencia, String nombre, String arma) {
         this();
         this.nombre = nombre;
