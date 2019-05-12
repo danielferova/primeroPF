@@ -279,11 +279,11 @@ public class Registrar extends javax.swing.JFrame {
         
         
        //nombre de la clase tanque y vehiculos
-        Vehiculos v = new Tanque();
-        contenedor.add(v);
+     //   Vehiculos v = new Tanque();
+       // contenedor.add(v);
         //nombre de la clase avion y vehiculos
-         Vehiculos ve = new Avion();
-        contenedor.add(ve);
+        // Vehiculos ve = new Avion();
+        //contenedor.add(ve);
         
          //NOMBRE DE LA PERSONA ATRUBUTOS
         Persona  person = new Persona(nombre, v1, v2, v3, tipo1, tipo2, tipo3);

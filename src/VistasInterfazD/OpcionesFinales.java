@@ -147,10 +147,13 @@ public class OpcionesFinales extends javax.swing.JFrame {
  */
     private void jButtonEstadisticasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEstadisticasActionPerformed
         // TODO add your handling code here:
-        Estadisticas e = new Estadisticas();
+      /*  Estadisticas e = new Estadisticas();
         e.show();
         e.setSize(1490, 1200);
-        dispose();
+        dispose();*/
+      this.setVisible(false);
+      new Estadisticas().setVisible(true);
+      
     }//GEN-LAST:event_jButtonEstadisticasActionPerformed
 
     /**
